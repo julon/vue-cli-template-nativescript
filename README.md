@@ -1,4 +1,4 @@
-# vue-cli-template-library
+# vue-cli-template-nativescript
 ![Commitizen](https://img.shields.io/badge/Commitizen-enabled-brightgreen.svg)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 ![Npm badge](https://img.shields.io/npm/v/vue-cli-template-nativescript.svg)
@@ -20,17 +20,16 @@ $ cd my-project
 $ npm install
 $ npm run dev
 
-# In another shell, to run on your devices
-$ tns run android
+# In another shell, to run on emulators which is going to refresh on file changes
+$ npm run android
 # or/and
-$ tns run ios
+$ npm run ios
 ```
 
 ## What's included
 
 * `npm run build` : Production-ready build.
-  * Export to CommonJS, ES Modules, UMD(dev & minified)
-  * CSS is embedded in the JS by default
+  * Export to CommonJS (dev & minified)
   * Using Rollup to compute Vue, ES6 js files
   * Pugjs and Stylus supported in vue files
 * `npm run dev` : Run a rollup build in watch mode

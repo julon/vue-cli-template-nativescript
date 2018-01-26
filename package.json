@@ -13,7 +13,7 @@
   "homepage": "https://github.com/julon/vue-cli-template-nativescript#readme",
   "keywords": [
     "vue",
-	"nativescript",
+    "nativescript",
     "vue-nativescript",
     "vue-library",
     "vue-template"
@@ -55,5 +55,6 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ]
-  }
+  },
+  "dependencies": {}
 }
