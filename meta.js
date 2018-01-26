@@ -3,32 +3,36 @@ module.exports = {
     name: {
       type: "string",
       required: true,
-      label: "Project name (kebab-case only)"
+      message: "Project name (kebab-case only)"
     },
     description: {
       type: "string",
       required: true,
-      label: "Project description",
+      message: "Project description",
       default: "A Nativescript + Vue.js 2.0 project"
     },
     author: {
       type: "string",
-      label: "Author"
-    },
-    email: {
-      type: "string",
-      required: true,
-      label: "Email"
+      message: "Author"
     },
     repos: {
       type: "string",
       required: true,
-      label: "Github repository URL",
+      message: "Github repository URL",
       default: "user/repository"
+    },
+    semanticRelease: {
+      type: "confirm",
+      message: "Do you want to use semantic release?",
+      default: true
     }
   },
-  "skipInterpolation": "src/**/*.vue",
+  filters: {
+    ".commitlintrc.json": "semanticRelease"
+  },
+  skipInterpolation: "src/**/*.{html,vue}",
   complete (data) {
+    console.log(data)
     // cd dir
     // npm install -g nativescript semantic-release-cli && npm install && tns init && semantic-release-cli setup
   }

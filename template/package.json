@@ -18,6 +18,9 @@
     "nativescript-vue"
   ],
 	"scripts": {
+		"precommit": "lint-staged",{{#semanticRelease}}
+		"cz": "git-cz",
+		"commitmsg": "commitlint -e $GIT_PARAMS",{{/semanticRelease}}
     "android": "tns run android --emulator",
     "ios": "tns run ios --emulator",
 		"dev": "rollup -c -w --environment TARGET:development",
@@ -28,11 +31,18 @@
 	"dependencies": {
 		"nativescript-vue": "^0.7.8"
 	},
-	"devDependencies": {
+	"devDependencies": { {{#semanticRelease}}
+		"@commitlint/cli": "^6.0.2",
+		"@commitlint/config-conventional": "^5.2.3",
+		"@semantic-release/changelog": "^1.0.0",
+    "@semantic-release/git": "^2.0.1",
+    "@semantic-release/github": "^3.0.1",{{/semanticRelease}}
 		"babel-core": "^6.26.0",
 		"babel-eslint": "^8.1.2",
 		"babel-plugin-module-resolver": "^3.0.0",
-		"babel-preset-vue-app": "^2.0.0",
+		"babel-preset-vue-app": "^2.0.0",{{#semanticRelease}}
+		"commitizen": "^2.9.6",
+		"cz-conventional-changelog": "^2.1.0",{{/semanticRelease}}
 		"eslint": "^4.14.0",
 		"eslint-config-prettier": "^2.9.0",
 		"eslint-config-standard": "^11.0.0-beta.0",
@@ -43,7 +53,9 @@
 		"eslint-plugin-prettier": "2.4.0",
 		"eslint-plugin-promise": "^3.6.0",
 		"eslint-plugin-standard": "^3.0.1",
-		"eslint-plugin-vue": "^4.0.1",
+		"eslint-plugin-vue": "^4.0.1",{{#semanticRelease}}
+		"husky": "^0.14.3",{{/semanticRelease}}
+		"lint-staged": "^6.0.0",
 		"prettier": "^1.9.2",
 		"rollup": "^0.54.1",
 		"rollup-plugin-babel": "^3.0.3",
@@ -61,5 +73,29 @@
 		"vue": "^2.5.13",
 		"vue-loader": "^13.6.2",
 		"vue-template-compiler": "^2.5.13"
-	}
+	},{{#semanticRelease}}
+	"config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },{{/semanticRelease}}
+  "lint-staged": {
+    "*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+	}{{#semanticRelease}},
+	"release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "getLastRelease": "@semantic-release/github",
+    "publish": [
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
+  }{{/semanticRelease}}
 }
