@@ -16,7 +16,7 @@ const config = {
   input: "src/main.js",
   external: (id) => id.startsWith('ui/') || id.startsWith('application') || id.startsWith('text'),
   output: {
-    name: 'NativeScript-Vue-App',
+    name: '{{ name }}',
     file: "app/app.js",
     format: "cjs",
     sourcemap: false
