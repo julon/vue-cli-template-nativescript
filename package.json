@@ -21,7 +21,8 @@
   "scripts": {
     "cz": "git-cz",
     "commitmsg": "commitlint -e $GIT_PARAMS",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "devDependencies": {
     "@commitlint/cli": "^6.0.2",
@@ -33,8 +34,9 @@
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.3",
-    "semantic-release": "^12.2.2",
-    "vue-cli": "^2.8.1"
+    "semantic-release": "^12.4.1",
+    "vue-cli": "^2.8.1",
+    "travis-deploy-once": "^4.3.3"
   },
   "config": {
     "commitizen": {

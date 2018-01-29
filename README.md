@@ -9,7 +9,7 @@
 
 > Bring all the additional tools to complete the Nativescript Vue workflow. Add linters, es6 support with babel, minified build generation, etc. Compatible with any tns testing tooling.
 
-> Rollup + Babel + TravisCI + SemanticRelease
+> Nativescript + VueJS + Rollup + Babel + SemanticRelease
 
 ## Usage
 
