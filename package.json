@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-template-nativescript",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "Template for developing Nativescript-VueJS projects",
   "repository": {
