@@ -1,3 +1,11 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/julon/vue-cli-template-nativescript/compare/v1.0.1...v1.0.2) (2018-03-10)
+
+
+### Bug Fixes
+
+* update deprecated packages ([47e0278](https://github.com/julon/vue-cli-template-nativescript/commit/47e0278))
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/julon/vue-cli-template-nativescript/compare/v1.0.0...v1.0.1) (2018-03-10)
 
