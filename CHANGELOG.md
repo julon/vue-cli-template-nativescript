@@ -1,3 +1,11 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/julon/vue-cli-template-nativescript/compare/v1.0.0...v1.0.1) (2018-03-10)
+
+
+### Bug Fixes
+
+* add release.config.js ([2f5a3ed](https://github.com/julon/vue-cli-template-nativescript/commit/2f5a3ed))
+
 <a name="1.0.0"></a>
 # 1.0.0 (2018-01-29)
 
